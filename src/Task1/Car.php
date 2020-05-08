@@ -47,7 +47,7 @@ class Car{
     }
 
     public function getPitStopTime(): int{
-        return $this->PitStopTime;
+        return $this->pitStopTime;
     }
 
     public function getFuelConsumption(): float{
@@ -55,6 +55,6 @@ class Car{
     }
 
     public function getFuelTankVolume(): float{
-        return $this->FuelTankVolume;
+        return $this->fuelTankVolume;
     }
 }
