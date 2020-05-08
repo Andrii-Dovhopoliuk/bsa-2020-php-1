@@ -4,8 +4,14 @@ declare(strict_types=1);
 
 namespace App\Task1;
 
-class Car
-{
+class Car{
+    protected int $id;
+    protected string $image;
+    protected string $name;
+    protected int $speed;
+    protected int $pitStopTime;
+    protected float $fuelConsumption;
+    protected float $fuelTankVolume;
     public function __construct(
         int $id,
         string $image,
@@ -15,41 +21,40 @@ class Car
         float $fuelConsumption,
         float $fuelTankVolume
     ) {
-        //@todo
+        $this->id = $id;
+        $this->image = $image;
+        $this->name = $name;
+        $this->speed = $speed;
+        $this->pitStopTime = $pitStopTime;
+        $this->fuelConsumption = $fuelConsumption;
+        $this->fuelTankVolume = $fuelTankVolume;
     }
 
-    public function getId(): int
-    {
-        // @todo
+    public function getId(): int{
+        return $this->id;
     }
 
-    public function getImage(): string
-    {
-        // @todo
+    public function getImage(): string{
+        return $this->image;
     }
 
-    public function getName(): string
-    {
-        // @todo
+    public function getName(): string{
+        return $this->name;
     }
 
-    public function getSpeed(): int
-    {
-        // @todo
+    public function getSpeed(): int{
+        return $this->speed;
     }
 
-    public function getPitStopTime(): int
-    {
-        // @todo
+    public function getPitStopTime(): int{
+        return $this->PitStopTime;
     }
 
-    public function getFuelConsumption(): float
-    {
-        // @todo
+    public function getFuelConsumption(): float{
+        return $this->fuelConsumption;
     }
 
-    public function getFuelTankVolume(): float
-    {
-        // @todo
+    public function getFuelTankVolume(): float{
+        return $this->FuelTankVolume;
     }
 }
