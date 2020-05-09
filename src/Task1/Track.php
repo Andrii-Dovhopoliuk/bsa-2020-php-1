@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace App\Task1;
 
 class Track{
-    protected $lapLength;
-    protected $lapsNumber;
-    protected $cars = [];
+    private $lapLength;
+    private $lapsNumber;
+    private $cars = [];
     public function __construct(float $lapLength, int $lapsNumber){
         $this->lapLength = $lapLength;
         $this->lapsNumber = $lapsNumber;

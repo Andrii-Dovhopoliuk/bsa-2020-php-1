@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace App\Task1;
 
 class Car{
-    protected int $id;
-    protected string $image;
-    protected string $name;
-    protected int $speed;
-    protected int $pitStopTime;
-    protected float $fuelConsumption;
-    protected float $fuelTankVolume;
+    private int $id;
+    private string $image;
+    private string $name;
+    private int $speed;
+    private int $pitStopTime;
+    private float $fuelConsumption;
+    private float $fuelTankVolume;
     public function __construct(
         int $id,
         string $image,
