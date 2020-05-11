@@ -11,6 +11,10 @@ class Book{
     protected int $price;
     protected int $number;
     public function __construct(string $title,int $price,int $number){
+        if ($price < 0 || $number < 0) {
+            new \Exception('must be less than zero');
+            die;
+        }
         $this->title = $title;
         $this->price = $price;
         $this->number = $number;

@@ -9,6 +9,10 @@ class Track{
     private $lapsNumber;
     private $cars = [];
     public function __construct(float $lapLength, int $lapsNumber){
+        if ($lapLength < 0 || $lapsNumber < 0) {
+            new \Exception('must be less than zero');
+            die;
+        }
         $this->lapLength = $lapLength;
         $this->lapsNumber = $lapsNumber;
     }
