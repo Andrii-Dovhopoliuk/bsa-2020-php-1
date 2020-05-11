@@ -22,10 +22,23 @@ class Car{
         float $fuelTankVolume
     )
     {
-        if ($speed < 0 || $pitStopTime < 0 || $fuelConsumption < 0 || $fuelTankVolume < 0) {
-            new \Exception('must be less than zero');
-            die;
+        try {
+            if ($speed < 0) {
+                throw new \Exception('ERROR the value speed must be greater than zero');
+            }
+            if ($pitStopTime < 0 ) {
+                throw new \Exception('ERROR the value pitStopTime must be greater than zero');
+            }
+            if ($fuelConsumption < 0) {
+                throw new \Exception('ERROR the value fuelConsumption must be greater than zero');
+            }
+            if ($fuelTankVolume < 0) {
+                throw new \Exception('ERROR the value fuelTankVolume must be greater than zero');
+            }
+        }catch (\Exception $e){
+            echo $e->getMessage();
         }
+
         $this->id = $id;
         $this->image = $image;
         $this->name = $name;
