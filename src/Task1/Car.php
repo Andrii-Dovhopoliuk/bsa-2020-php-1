@@ -20,7 +20,12 @@ class Car{
         int $pitStopTime,
         float $fuelConsumption,
         float $fuelTankVolume
-    ) {
+    )
+    {
+        if ($speed < 0 || $pitStopTime < 0 || $fuelConsumption < 0 || $fuelTankVolume < 0) {
+            new \Exception('must be less than zero');
+            die;
+        }
         $this->id = $id;
         $this->image = $image;
         $this->name = $name;
@@ -28,11 +33,14 @@ class Car{
         $this->pitStopTime = $pitStopTime;
         $this->fuelConsumption = $fuelConsumption;
         $this->fuelTankVolume = $fuelTankVolume;
+
     }
+
 
     public function getId(): int{
         return $this->id;
     }
+
 
     public function getImage(): string{
         return $this->image;
